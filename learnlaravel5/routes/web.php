@@ -25,3 +25,6 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
     Route::resource('articles', 'ArticleController');
 });
 
+Route::get('article/{id}', 'ArticleController@show');
+Route::post('comment', 'CommentController@store');
+
